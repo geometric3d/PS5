@@ -1,8 +1,8 @@
-# PS4: Two View Geometry and Reconstruction
+# PS5: N-view Geometry
 
 ## Instructions
 * No late days allowed for Problem Sets (PS).
-* There are `3` sections in this assignment, comprising `35 pts` in total.
+* There are `4` sections in this assignment, comprising `25 pts` in total.
 
 
 # How to submit problem sets (PS)?
