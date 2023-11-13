@@ -1,0 +1,125 @@
+% \section{Camera Models  [12 pts]}
+\begin{questions}
+
+    \question \textbf{[6 pts]} Are these statements true or false?
+
+    (a) Given a quaternion $q$, $-q$ represents its inverse rotation.
+
+    \begin{tcolorbox}[fit,height=5cm, width=\textwidth, blank, borderline={0.5pt}{-2pt},halign=left, valign=center, nobeforeafter]
+
+
+    \end{tcolorbox}
+
+    (b) Given quaternions $q_1$ and $q_2$, the composition of these 2 rotations is $q_1 + q_2$.
+
+    \begin{tcolorbox}[fit,height=5cm, width=\textwidth, blank, borderline={0.5pt}{-2pt},halign=left, valign=center, nobeforeafter]
+
+
+    \end{tcolorbox}
+
+    (c) Given a unit quaternion $q$ such that $||q||=1$, there is a unique rotation it corresponds to.
+
+    \begin{tcolorbox}[fit,height=5cm, width=\textwidth, blank, borderline={0.5pt}{-2pt},halign=left, valign=center, nobeforeafter]
+
+
+    \end{tcolorbox}
+
+    \clearpage
+
+    \question \textbf{[4 pts]} Given a quaternion $q = [\sqrt{3}/2, 1/2, 0, 0]$, convert it to the axis-angle representation.
+
+    \begin{tcolorbox}[fit,height=5cm, width=\textwidth, blank, borderline={0.5pt}{-2pt},halign=left, valign=center, nobeforeafter]
+
+
+    \end{tcolorbox}
+
+
+
+    % \section{Single-view Geometry [12 pts]}
+    \question \textbf{[4 pts]} In Slide 33 of Lecture 19, we introduced a parameterization of rotation that $\Rv = [\rv_1, \rv_2, \rv_3] = F(\vv_1, \vv_2)$. Specifically,
+    \begin{equation*}
+        \rv_1 = \text{normalize}(\vv_1), \qquad \rv_2 = \text{normalize}(\vv_2 - (\vv_2 \cdot \rv_1)\rv_1), \qquad \rv_3 = \rv_1 \times \rv_2.
+    \end{equation*}
+    given $\vv_1, \vv_2 \in \mathbb{R}^3$. What's the output $\Rv'= F(\vv_1',\vv_2')$ if $\vv_1'=\vv_1, \vv_2' = -\vv_2+\vv_1$? Represent the output $\rv_1', \rv_2', \rv_3'$ using $\rv_1, \rv_2, \rv_3$.
+
+    \begin{tcolorbox}[fit,height=5cm, width=\textwidth, blank, borderline={0.5pt}{-2pt},halign=left, valign=center, nobeforeafter]
+
+
+    \end{tcolorbox}
+
+    \question \textbf{[4 pts]} Assume two cameras on a stereo rig is looking at an object from 5 meters away. The baseline between the two cameras is 20 cm. We observe the disparity of a pixel on that object is 5 mm. How does the disparity change if
+
+    (a) the baseline between the two cameras is set to 40 cm?
+
+    \begin{tcolorbox}[fit,height=5cm, width=\textwidth, blank, borderline={0.5pt}{-2pt},halign=left, valign=center, nobeforeafter]
+
+
+    \end{tcolorbox}
+
+    (b) the camera is set to 10 meters away from the object but the baseline between the two cameras keeps the same?
+
+    \begin{tcolorbox}[fit,height=5cm, width=\textwidth, blank, borderline={0.5pt}{-2pt},halign=left, valign=center, nobeforeafter]
+
+
+    \end{tcolorbox}
+
+    % \section{Single-view Reconstruction [8 pts]}
+
+    \question \textbf{[4 pts]} How many potential keypoints does superpoint predict \textbf{at most} from a $128\times128$ image?
+
+    \begin{tcolorbox}[fit,height=5cm, width=\textwidth, blank, borderline={0.5pt}{-2pt},halign=left, valign=center, nobeforeafter]
+
+
+    \end{tcolorbox}
+
+    \question \textbf{[6 pts]} Given corresponding 3D points $\{(\pv_i, \qv_i)\} \in (\mathbb{R}^3, \mathbb{R}^3)$, we want to find the optimal rigid transform. Assume the points are already mean-centered so we only need to find the rotation. For every pair of points $(\pv_i, \qv_i)$, both points are located on one of the $x$, $y$ and $z$ axes. Namely,
+    \begin{align*}
+        \forall i, \qquad & \pv_i = [u_i, 0, 0], \quad \qv_i = [v_i, 0, 0] \\
+        \text{or} \quad   & \pv_i = [0, u_i, 0], \quad \qv_i = [0, v_i, 0] \\
+        \text{or} \quad   & \pv_i = [0, 0, u_i], \quad \qv_i = [0, 0, v_i] \\
+    \end{align*}
+
+    (a) \textbf{[2 pts]}  What are the possible rotations intuitively?
+
+    \begin{tcolorbox}[fit,height=5cm, width=\textwidth, blank, borderline={0.5pt}{-2pt},halign=left, valign=center, nobeforeafter]
+
+
+    \end{tcolorbox}
+
+    (b) \textbf{[4 pts]} Prove they are the \textbf{only} answers mathematically.
+
+    \begin{tcolorbox}[fit,height=5cm, width=\textwidth, blank, borderline={0.5pt}{-2pt},halign=left, valign=center, nobeforeafter]
+
+
+    \end{tcolorbox}
+
+    \question \textbf{[12 pts]} We introduced 4 learning-based reconstruction methods in the lecture: PixelNeRF, NeRFormer, SRT, GBT.
+
+    Feel free to write your reasoning in case you are unsure.
+
+    (a) \textbf{[4 pts]} Which of them use volumetric rendering?
+
+    \begin{tcolorbox}[fit,height=5cm, width=\textwidth, blank, borderline={0.5pt}{-2pt},halign=left, valign=center, nobeforeafter]
+
+
+    \end{tcolorbox}
+
+    (b) \textbf{[4 pts]} Which of them use projection-based features?
+
+    \begin{tcolorbox}[fit,height=5cm, width=\textwidth, blank, borderline={0.5pt}{-2pt},halign=left, valign=center, nobeforeafter]
+
+
+    \end{tcolorbox}
+
+
+    \clearpage
+
+    (c) \textbf{[4 pts]} Which of them use learning-based aggregation?
+
+
+    \begin{tcolorbox}[fit,height=5cm, width=\textwidth, blank, borderline={0.5pt}{-2pt},halign=left, valign=center, nobeforeafter]
+
+
+    \end{tcolorbox}
+
+\end{questions}

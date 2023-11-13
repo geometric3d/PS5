@@ -1,8 +1,7 @@
 # PS6: Parametrizing Rotations and Learning-based Reconstruction
 
 ## Instructions
-* No late days allowed for Problem Sets (PS).
-* There are `20 pts` in total.
+* There are `40 pts` in total.
 
 
 # How to submit problem sets (PS)?
