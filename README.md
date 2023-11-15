@@ -1,4 +1,4 @@
-# PS6: Parametrizing Rotations and Learning-based Reconstruction
+# PS5: Parametrizing Rotations and Learning-based Reconstruction
 
 ## Instructions
 * There are `40 pts` in total.
