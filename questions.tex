@@ -34,7 +34,7 @@
 
     \end{tcolorbox}
 
-    \question \textbf{[4 pts]} In Slide 33 of Lecture 19, we introduced a parameterization of rotation that $\Rv = [\rv_1, \rv_2, \rv_3] = F(\vv_1, \vv_2)$. Specifically,
+    \question \textbf{[4 pts]} In Lecture 20, we introduced a parameterization of rotation that $\Rv = [\rv_1, \rv_2, \rv_3] = F(\vv_1, \vv_2)$. Specifically,
     \begin{equation*}
         \rv_1 = \text{normalize}(\vv_1), \qquad \rv_2 = \text{normalize}(\vv_2 - (\vv_2 \cdot \rv_1)\rv_1), \qquad \rv_3 = \rv_1 \times \rv_2.
     \end{equation*}
@@ -66,18 +66,18 @@
     \end{tcolorbox}
 
 
-    \section{Learning-based SfM [8pts]}
+    \section{MVS and Learning-based SfM [20pts]}
 
-    \question \textbf{[4 pts]} Assume two cameras on a stereo rig is looking at an object from 5 meters away. The baseline between the two cameras is 20 cm. We observe the disparity of a pixel on that object is 5 mm. How does the disparity change if
+    \question \textbf{[4 pts]} Assume two cameras on a stereo rig, separated by a baseline of 20cm, are looking at an object from 5 meters away. Suppose that for a specific 3D point on the object, the disparity between its pixel coordinates for the two images is 5 pixels. How does the disparity change if:
 
-    (a) the baseline between the two cameras is set to 40 cm?
+    (a) the baseline between the two cameras is increased to 40 cm?
 
     \begin{tcolorbox}[fit,height=8cm, width=\textwidth, blank, borderline={0.5pt}{-2pt},halign=left, valign=center, nobeforeafter]
 
 
     \end{tcolorbox}
 
-    (b) the camera is set to 10 meters away from the object but the baseline between the two cameras keeps the same?
+    (b) the camera rig is set to 10 meters away from the object but the baseline between the two cameras remains 20 cm?
 
     \begin{tcolorbox}[fit,height fill, width=\textwidth, blank, borderline={0.5pt}{-2pt},halign=left, valign=center, nobeforeafter]
 
@@ -85,8 +85,39 @@
 
     \question \textbf{[4 pts]} How many potential keypoints does superpoint predict \textbf{at most} from a $128\times128$ image?
 
+    \begin{tcolorbox}[fit,height=5cm, width=\textwidth, blank, borderline={0.5pt}{-2pt},halign=left, valign=center, nobeforeafter]
+
+
+    \end{tcolorbox}
+    
+ \question \textbf{[6 pts]} Are these statements true or false?
+
+    (a) A larger window size in SSD always yields better disparity estimates.
+
+    \begin{tcolorbox}[fit,height=4cm, width=\textwidth, blank, borderline={0.5pt}{-2pt},halign=left, valign=center, nobeforeafter]
+
+
+    \end{tcolorbox}
+
+    (b) When comparing images with varying lighting, sum of Absolute differences should be preferred over normalized cross correlation for accurate disparity estimates.
+
+    \begin{tcolorbox}[fit,height=4cm, width=\textwidth, blank, borderline={0.5pt}{-2pt},halign=left, valign=center, nobeforeafter]
+ 
+    \end{tcolorbox}
+
+
+    (c)  In fronto-parallel plane sweep stereo, we need the neighboring cameras to have the same orientation (Rotation) as the camera for which depth is being estimate.
+
     \begin{tcolorbox}[fit,height fill, width=\textwidth, blank, borderline={0.5pt}{-2pt},halign=left, valign=center, nobeforeafter]
 
 
     \end{tcolorbox}
+    
+    \clearpage
+        \question \textbf{[6 pts]} In fronto-parallel plane sweep stereo, a key step is to compute the homography that warps pixels from a neighboring image onto the current image under an assumed planar geometry for the scene. Assume that the current image has a camera matrix $K[I | 0]$, and its neighbor has a camera matrix $K' [R | \mathbf{t}]$. Derive the formula for the planar homography corresponding to the plane $z = d$ (i.e. a fronto-parallel plane a distance $d$ away from the first camera).
+
+    \begin{tcolorbox}[fit,height fill, width=\textwidth, blank, borderline={0.5pt}{-2pt},halign=left, valign=center, nobeforeafter]
+    
+        \end{tcolorbox}
+
 \end{questions}
